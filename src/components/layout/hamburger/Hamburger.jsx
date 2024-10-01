@@ -5,10 +5,10 @@ import styles from './Hamburger.module.scss'
 import Menu from './Menu'
 
 const Hamburger = () => {
-  const { isShow, setIsShow } = useOnClickOutside(false)
+  const { isShow, ref, setIsShow } = useOnClickOutside(false)
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} ref={ref}>
       <button onClick={() => setIsShow(!isShow)}>
         {isShow ? <IoClose color='white' /> : <CgMenuRight color='white' />}
       </button>
